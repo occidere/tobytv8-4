@@ -65,7 +65,7 @@
 
    [결과]
 
-   ![image-20180819192412789](/var/folders/fx/sg79gcs10cv4zf_st847ny840000gn/T/abnerworks.Typora/image-20180819192412789.png)
+   ![image-20180819192412789](img/image-20180819192412789.png)
 
    -> **Blocking 방식의 한계**가 있음
 
@@ -112,7 +112,7 @@
 
      [결과]
 
-     ![image-20180819192514991](/var/folders/fx/sg79gcs10cv4zf_st847ny840000gn/T/abnerworks.Typora/image-20180819192514991.png)
+     ![image-20180819192514991](img/image-20180819192514991.png)
 
    
 
@@ -178,7 +178,7 @@
 
    [결과]
 
-   ![image-20180819192601432](/var/folders/fx/sg79gcs10cv4zf_st847ny840000gn/T/abnerworks.Typora/image-20180819192601432.png)
+   ![image-20180819192601432](img/image-20180819192601432.png)
 
 
 
@@ -257,7 +257,7 @@ public class Tobytv8Application_1 {
 
 [결과]
 
-![image-20180819192711905](/var/folders/fx/sg79gcs10cv4zf_st847ny840000gn/T/abnerworks.Typora/image-20180819192711905.png)
+![image-20180819192711905](img/image-20180819192711905.png)
 
 그러나 이 방식 역시 Future를 사용한 것이라 비 동기적으로 작업이 이뤄지기는 하나, 결과값을 얻기 위해선 블로킹 상태로 대기해야 됨 
 (web으로 생각하면 servlet thread가 결과값을 받기 전 까지 종료되지 못하고 계속 대기 상태에 있는 상황)
@@ -329,7 +329,7 @@ public class Tobytv8Application_2 {
 
 [결과]
 
-![image-20180819192850208](/var/folders/fx/sg79gcs10cv4zf_st847ny840000gn/T/abnerworks.Typora/image-20180819192850208.png)
+![image-20180819192850208](img/image-20180819192850208.png)
 
 main 스레드 종료 후, 별도 스레드에서 작업이 완료된 뒤 결과값을 반환받는 것을 확인 가능
 
@@ -345,11 +345,11 @@ main 스레드 종료 후, 별도 스레드에서 작업이 완료된 뒤 결과
 
 ### 비동기 서블릿?
 
-![image-20180819193251587](/var/folders/fx/sg79gcs10cv4zf_st847ny840000gn/T/abnerworks.Typora/image-20180819193251587.png)
+![image-20180819193251587](img/image-20180819193251587.png)
 
 
 
-![image-20180819193415862](/var/folders/fx/sg79gcs10cv4zf_st847ny840000gn/T/abnerworks.Typora/image-20180819193415862.png)
+![image-20180819193415862](img/image-20180819193415862.png)
 
 요청을 서블릿 스레드에서 받아서 
 -> 작업 스레드에게 넘기고 서블릿 스레드 반환
@@ -411,7 +411,7 @@ public class Tobytv8Application_3 {
 
 **[/async 결과]**
 
-![image-20180820010309915](/var/folders/fx/sg79gcs10cv4zf_st847ny840000gn/T/abnerworks.Typora/image-20180820010309915.png)
+![image-20180820010309915](img/image-20180820010309915.png)
 
 -> servlet thread 에서 실행된다.
 
@@ -419,7 +419,7 @@ public class Tobytv8Application_3 {
 
 **[/callable 결과]**
 
-![image-20180820010506524](/var/folders/fx/sg79gcs10cv4zf_st847ny840000gn/T/abnerworks.Typora/image-20180820010506524.png)
+![image-20180820010506524](img/image-20180820010506524.png)
 
 -> 별도의 워커 스레드 (MvcAsync1) 에서 실행된다.
 
@@ -622,7 +622,7 @@ http://localhost:8080/emitter
 
 **[결과]**
 
-![image-20180820014015693](/var/folders/fx/sg79gcs10cv4zf_st847ny840000gn/T/abnerworks.Typora/image-20180820014015693.png)
+![image-20180820014015693](img/image-20180820014015693.png)
 
 
 
