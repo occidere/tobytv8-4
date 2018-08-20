@@ -81,6 +81,7 @@
    **FutureTask?**
 
    * 내부에 done() 메서드가 있어서, get()을 통해 결과를 받아올 수 있음
+   
      [FutureEx1_2]
 
      ````java
@@ -352,8 +353,11 @@ main 스레드 종료 후, 별도 스레드에서 작업이 완료된 뒤 결과
 ![image-20180819193415862](img/image-20180819193415862.png)
 
 요청을 서블릿 스레드에서 받아서 
+
 -> 작업 스레드에게 넘기고 서블릿 스레드 반환
+
 -> 작업 스레드가 비동기적으로 작업 처리해 결과 전달
+
 -> 서블릿 스레드 풀에서 스레드 받아서 반환
 
 
@@ -568,7 +572,9 @@ public String drevent(String msg) {
 **[테스트 1]**
 
 http://localhost:8080/dr -> 요청 2회
+
 http://localhost:8080/dr/count -> 큐 사이즈 체크
+
 http://localhost:8080/dr/event?msg=dr -> 이벤트 발생 후 /dr 페이지 응답 확인
 
 
@@ -576,7 +582,9 @@ http://localhost:8080/dr/event?msg=dr -> 이벤트 발생 후 /dr 페이지 응�
 **[테스트 2 - LoadTest]**
 
 LoadTest에서 http://localhost:8080/dr로 100개 요청 전송
+
 http://localhost:8080/dr/count -> 큐 사이즈 체크
+
 http://localhost:8080/dr/event?msg=loadTest -> 이벤트 발생 후 콘솔창에서 100개 전부 한번에 응답 확인
 
 
