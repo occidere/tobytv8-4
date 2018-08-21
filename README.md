@@ -16,15 +16,12 @@
       * 어노테이션 사용 /w Future
       * 어노테이션 사용 /w ListenableFuture
 
-   3. Spring의 비동기 처리를 Web에 적용
+2. Spring의 비동기 처리를 Web에 적용
 
-      * 비동기 서블릿
-
-      * worker 스레드를 생성하지 않고 동시에 다중 요청을 처리하는 방법
-
-        * DeferredResult (Event 방식)
-
-        * Emitter (Stream 방식)
+    * 비동기 서블릿
+    * worker 스레드를 생성하지 않고 동시에 다중 요청을 처리하는 방법
+    * DeferredResult (Event 방식)
+    * Emitter (Stream 방식)
 
           
 
@@ -581,7 +578,7 @@ http://localhost:8080/dr/event?msg=dr -> 이벤트 발생 후 /dr 페이지 응�
 
 **[테스트 2 - LoadTest]**
 
-LoadTest에서 http://localhost:8080/dr로 100개 요청 전송
+LoadTest에서 http://localhost:8080/dr -> 100개 요청 전송
 
 http://localhost:8080/dr/count -> 큐 사이즈 체크
 
